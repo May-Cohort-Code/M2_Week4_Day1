@@ -1,0 +1,14 @@
+<h2>All Movies</h2>
+
+{{#each allMovies}}
+<div style="border:solid cyan; padding:5px">
+    <h3>{{title}}</h3>
+    <form action="/movies/{{_id}}">
+        <button>See Movie Details</button>
+    </form>
+    <form action="/movies/{{_id}}/delete" method="POST">
+        <button>Delete Movie</button>
+    </form>
+</div>
+<br>
+{{/each}}
